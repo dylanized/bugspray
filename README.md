@@ -3,8 +3,8 @@ bugspray
 
 This module is a wrapper for several useful Express.js debugging utilities:
 
-- errorface, colorful and descriptive error pages
-- express-debug, which provides a debugger tab in your express
+- [errorface](https://github.com/jgable/errorface), colorful and descriptive error pages
+- [express-debug](https://github.com/devoidfury/express-debug), provides a browser debugger tab
 
 Setup
 ---
