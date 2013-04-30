@@ -32,6 +32,6 @@ You should only run this in development or test environments. You can use condit
 
 You can toggle the debugger tab with a command line argument like this:
 
-    if (process.argv[2] === "--edt") {
+    if (process.argv[2] == "--edt") {
     	bugspray.edt(app);		
     }
