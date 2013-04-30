@@ -32,7 +32,7 @@ Customize
 You should only run this in development or test environments. You can use conditionals like this:
 
     if ('development' == app.get('env')) {
-      error.edt(app);
+      bugspray.edt(app);
     }
 
 You can toggle the debugger tab with a command line argument like this:
