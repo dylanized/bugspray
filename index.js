@@ -1,20 +1,16 @@
 // Bugspray
 
-module.exports = function(app) {
+var edt = require('express-debug'),
+	errorface = require('errorface');
 
-	var edt = require('express-debug');
-	var errorface = require('errorface');
-	
-	// launch express debug tab
-	if (process.argv[2] == "edt" || 
-		process.argv[2] == "--edt" ||
-		process.argv[2] == "debug" ||
-		process.argv[2] == "--debug" ||
-		process.argv[2] == "--debug-brk") {
-			app.use(edt(app, {}))
-	}
-	
-	// launch special error page
-	app.use(errorface.errorHandler());
+var cached_app = false;
 
+module.exports.edt = function(app, flag) {
+	cached_app = app;
+	cached_app.use(edt(cached_app, {}));
+}
+
+module.exports.error = function(app, flag) {
+	if (app) cached_app = app;
+	cached_app.use(errorface.errorHandler());
 }
