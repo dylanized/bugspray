@@ -1,6 +1,6 @@
 // Bugspray
 
-exports = function(app) {
+module.exports = function(app) {
 
 	var edt = require('express-debug');
 	var errorface = require('errorface');
