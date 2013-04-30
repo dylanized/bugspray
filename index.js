@@ -1,9 +1,9 @@
 // Bugspray
 
-module.exports = function(app) {
+exports = function(app) {
 
-	edt = require('express-debug');
-	errorface = require('errorface');
+	var edt = require('express-debug');
+	var errorface = require('errorface');
 	
 	// launch express debug tab
 	if (process.argv[2] == "edt" || 
