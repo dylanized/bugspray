@@ -13,18 +13,13 @@ Load module:
 
     var bugspray = require('bugspray');
    
-Run Express Debug Tab:
+Run Express Debug Tab (must be run before router):
 
-    bugspray.edt(app);
+    bugspray.edt(app);   
     
-(must be run before router)
-    
-Run Errorface:
+Run Errorface (must be run after the routes, instead of Express error handler):
 
     bugspray.error(app);
-
-(must be run after the routes, and instead of Express error handler)
-
 
 Customize
 ---
